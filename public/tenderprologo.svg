@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Building icon -->
+  <g transform="translate(0, 5)">
+    <rect x="2" y="18" width="12" height="22" rx="1" fill="url(#logoGradient)"/>
+    <rect x="4" y="21" width="3" height="4" rx="0.5" fill="white"/>
+    <rect x="9" y="21" width="3" height="4" rx="0.5" fill="white"/>
+    <rect x="4" y="27" width="3" height="4" rx="0.5" fill="white"/>
+    <rect x="9" y="27" width="3" height="4" rx="0.5" fill="white"/>
+    <rect x="5" y="33" width="5" height="7" rx="0.5" fill="white"/>
+    <!-- Crane -->
+    <rect x="14" y="2" width="2" height="38" fill="url(#logoGradient)"/>
+    <rect x="14" y="2" width="20" height="2" fill="url(#logoGradient)"/>
+    <line x1="14" y1="4" x2="14" y2="18" stroke="url(#logoGradient)" stroke-width="1"/>
+    <line x1="22" y1="4" x2="22" y2="12" stroke="url(#logoGradient)" stroke-width="1"/>
+    <line x1="28" y1="4" x2="28" y2="8" stroke="url(#logoGradient)" stroke-width="1"/>
+    <rect x="32" y="2" width="3" height="3" fill="url(#logoGradient)"/>
+  </g>
+</svg>
