@@ -22,6 +22,10 @@ interface UseModalsReturn {
   setLoginOpen: (open: boolean) => void;
   loginRole: 'OWNER' | 'CONTRACTOR';
   setLoginRole: (role: 'OWNER' | 'CONTRACTOR') => void;
+  loginEmail: string;
+  setLoginEmail: (email: string) => void;
+  loginPassword: string;
+  setLoginPassword: (password: string) => void;
   openLogin: () => void;
   closeLogin: () => void;
 
@@ -148,6 +152,8 @@ export function useModals(): UseModalsReturn {
   // Login modal state
   const [loginOpen, setLoginOpen] = useState(false);
   const [loginRole, setLoginRole] = useState<'OWNER' | 'CONTRACTOR'>('OWNER');
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
 
   // Register modal state
   const [registerOpen, setRegisterOpen] = useState(false);
@@ -199,7 +205,11 @@ export function useModals(): UseModalsReturn {
 
   // Login modal actions
   const openLogin = useCallback(() => setLoginOpen(true), []);
-  const closeLogin = useCallback(() => setLoginOpen(false), []);
+  const closeLogin = useCallback(() => {
+    setLoginOpen(false);
+    setLoginEmail('');
+    setLoginPassword('');
+  }, []);
 
   // Register modal actions
   const openRegister = useCallback((role?: 'OWNER' | 'CONTRACTOR') => {
@@ -300,6 +310,10 @@ export function useModals(): UseModalsReturn {
     setLoginOpen,
     loginRole,
     setLoginRole,
+    loginEmail,
+    setLoginEmail,
+    loginPassword,
+    setLoginPassword,
     openLogin,
     closeLogin,
 

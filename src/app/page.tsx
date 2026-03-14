@@ -89,8 +89,8 @@ export default function TenderProApp() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     const success = await login(
-      modals.loginOpen ? '' : '', // email handled in modal
-      '', // password handled in modal
+      modals.loginEmail,
+      modals.loginPassword,
       modals.loginRole
     );
     if (success) {
@@ -234,10 +234,10 @@ export default function TenderProApp() {
         onOpenChange={modals.setLoginOpen}
         loginRole={modals.loginRole}
         setLoginRole={modals.setLoginRole}
-        email=""
-        setEmail={() => {}}
-        password=""
-        setPassword={() => {}}
+        email={modals.loginEmail}
+        setEmail={modals.setLoginEmail}
+        password={modals.loginPassword}
+        setPassword={modals.setLoginPassword}
         isLoading={isLoading}
         onLogin={handleLogin}
         onSwitchToRegister={() => { modals.setLoginOpen(false); modals.setRegisterOpen(true); }}
